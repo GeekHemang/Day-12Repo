@@ -43,5 +43,35 @@ namespace AsyncProgrammingApp.Services
             thread.Start();
         
         }
+
+        public void PrintViaTask() {
+
+            Task.Run(() =>
+            {
+                Print(10);
+            });
+        
+        }
+
+        public Task PrintViaTaskWithAwaitable() { 
+        
+            return Task.Run(() =>
+            {
+                Print(10);
+            });
+
+        }
+
+        public Task<string> PrintViaTaskWithAwaitableAndResult()
+        {
+
+            return Task.Run(() =>
+            {
+                Print(10);
+
+                return "Hello task is completed successfully";
+            });
+
+        }
     }
 }

@@ -31,6 +31,10 @@
             btnHello = new Button();
             btnPrintSync = new Button();
             btnThread = new Button();
+            btnTask = new Button();
+            btnAwaitable = new Button();
+            btnAwaitableResult = new Button();
+            btnApiCall = new Button();
             SuspendLayout();
             // 
             // btnHello
@@ -67,11 +71,59 @@
             btnThread.UseVisualStyleBackColor = true;
             btnThread.Click += btnThread_Click;
             // 
+            // btnTask
+            // 
+            btnTask.Location = new Point(245, 49);
+            btnTask.Name = "btnTask";
+            btnTask.Size = new Size(120, 40);
+            btnTask.TabIndex = 3;
+            btnTask.Text = "Task";
+            btnTask.UseVisualStyleBackColor = true;
+            btnTask.Click += btnTask_Click;
+            // 
+            // btnAwaitable
+            // 
+            btnAwaitable.Location = new Point(245, 128);
+            btnAwaitable.Name = "btnAwaitable";
+            btnAwaitable.Size = new Size(121, 53);
+            btnAwaitable.TabIndex = 4;
+            btnAwaitable.Text = "Awaitable";
+            btnAwaitable.UseVisualStyleBackColor = true;
+            btnAwaitable.Click += btnAwaitable_Click;
+            // 
+            // btnAwaitableResult
+            // 
+            btnAwaitableResult.Location = new Point(463, 118);
+            btnAwaitableResult.Name = "btnAwaitableResult";
+            btnAwaitableResult.Size = new Size(221, 73);
+            btnAwaitableResult.TabIndex = 5;
+            btnAwaitableResult.Text = "AwaitableWithResult";
+            btnAwaitableResult.UseVisualStyleBackColor = true;
+            btnAwaitableResult.Click += btnAwaitableResult_Click;
+            // 
+            // btnApiCall
+            // 
+            btnApiCall.Location = new Point(338, 233);
+            btnApiCall.Name = "btnApiCall";
+            btnApiCall.Size = new Size(174, 84);
+            btnApiCall.TabIndex = 6;
+            btnApiCall.Text = "API Call";
+            btnApiCall.UseVisualStyleBackColor = true;
+            btnApiCall.Click += btnApiCall_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+
             ClientSize = new Size(714, 310);
+
+            ClientSize = new Size(866, 458);
+            Controls.Add(btnApiCall);
+            Controls.Add(btnAwaitableResult);
+            Controls.Add(btnAwaitable);
+            Controls.Add(btnTask);
+
             Controls.Add(btnThread);
             Controls.Add(btnPrintSync);
             Controls.Add(btnHello);
@@ -87,5 +139,9 @@
         private Button btnHello;
         private Button btnPrintSync;
         private Button btnThread;
+        private Button btnTask;
+        private Button btnAwaitable;
+        private Button btnAwaitableResult;
+        private Button btnApiCall;
     }
 }
