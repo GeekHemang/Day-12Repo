@@ -18,5 +18,18 @@ namespace AsyncProgrammingApp.Services
 
         
         }
+
+        public void Print(int seconds) { 
+        
+            DateTime startTime = DateTime.Now;
+            TimeSpan future=  TimeSpan.FromSeconds( seconds );
+
+            while (DateTime.Now - startTime < future) {
+
+                Debug.WriteLine($"time is: {DateTime.Now.ToString("hh:mm:ss")} ");
+
+            }
+        
+        }
     }
 }
