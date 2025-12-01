@@ -17,7 +17,7 @@ namespace AsyncProgrammingApp
         private void btnPrintSync_Click(object sender, EventArgs e)
         {
             PrinterService service = new PrinterService();
-            service.Print();
+            service.Print(8);
         }
     }
 }
