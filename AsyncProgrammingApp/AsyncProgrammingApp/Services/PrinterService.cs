@@ -31,5 +31,17 @@ namespace AsyncProgrammingApp.Services
             }
         
         }
+
+        public void PrintViaThread() {
+
+
+            Thread thread = new Thread(() =>
+            {
+                Print(10);
+            });
+
+            thread.Start();
+        
+        }
     }
 }

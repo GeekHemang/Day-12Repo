@@ -30,37 +30,55 @@
         {
             btnHello = new Button();
             btnPrintSync = new Button();
+            btnThread = new Button();
             SuspendLayout();
             // 
             // btnHello
             // 
-            btnHello.Location = new Point(58, 49);
+            btnHello.Location = new Point(41, 29);
+            btnHello.Margin = new Padding(2, 2, 2, 2);
             btnHello.Name = "btnHello";
-            btnHello.Size = new Size(130, 58);
+            btnHello.Size = new Size(91, 35);
             btnHello.TabIndex = 0;
             btnHello.Text = "Hello";
             btnHello.UseVisualStyleBackColor = true;
             btnHello.Click += btnHello_Click;
+            btnHello.Click += btnHello_Click;
             // 
             // btnPrintSync
             // 
-            btnPrintSync.Location = new Point(58, 148);
+            btnPrintSync.Location = new Point(41, 89);
+            btnPrintSync.Margin = new Padding(2, 2, 2, 2);
             btnPrintSync.Name = "btnPrintSync";
-            btnPrintSync.Size = new Size(130, 59);
+            btnPrintSync.Size = new Size(91, 35);
             btnPrintSync.TabIndex = 1;
             btnPrintSync.Text = "SyncPrint";
             btnPrintSync.UseVisualStyleBackColor = true;
             btnPrintSync.Click += btnPrintSync_Click;
             // 
+            // btnThread
+            // 
+            btnThread.Location = new Point(41, 155);
+            btnThread.Margin = new Padding(2, 2, 2, 2);
+            btnThread.Name = "btnThread";
+            btnThread.Size = new Size(78, 20);
+            btnThread.TabIndex = 2;
+            btnThread.Text = "Thread";
+            btnThread.UseVisualStyleBackColor = true;
+            btnThread.Click += btnThread_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(866, 458);
+            ClientSize = new Size(714, 310);
+            Controls.Add(btnThread);
             Controls.Add(btnPrintSync);
             Controls.Add(btnHello);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -68,5 +86,6 @@
 
         private Button btnHello;
         private Button btnPrintSync;
+        private Button btnThread;
     }
 }
